@@ -1,10 +1,32 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.hero {
+  /* The image used */
+  background-image: url('../img/hero.jpg');
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
   max-width: 1170px;
   width: 100%;
   margin: auto;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -17,76 +39,75 @@ p {
 }
 
 .medium {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .small {
   font-size: 20px;
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid black;
-  margin: 1em 0;
-  padding: 0; 
-}
-
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-content: center;
+.bg-white {
+  background-color: white;
 }
 
 #avatar {
   background-image: url('../img/avatar.jpg');
   width: 150px;
   height: 150px;
-
   /* fill the container, preserving aspect ratio, and cropping to fit */
   background-size: cover;
-
   /* center the image vertically and horizontally */
   background-position: center;
-
   /* round the edges to a circle with border radius 1/2 container size */
   border-radius: 50%;
-  border: 1px solid black;
-}
-
-#nav-logo {
-  align-self: center;
-  flex-basis: auto;
   margin: 20px;
+  border: 2px solid black;
 }
 
-#nav-name {
-  align-self: center;
-  flex-basis: auto;
-  margin: 20px;
-  line-height: 5x;
-  text-align: right;
-  line-height: 5px;
-}
-
-footer {
-  margin-top: 50px;
-  height: 100px;
+header {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#social-icons {
+  padding: 10px;
+  margin: 0 20px 0 20px;
+}
+
+a {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  transition: opacity .25s ease-out;
+}
+
+#social-icons a:hover {
+  opacity: .5;
+}
+
+#header-name {
+  padding: 10px;
+  text-align: center;
+  margin: 0 20px 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+#header-position {
+  padding: 10px;
+  text-align: center;
+  margin: 0 20px 0 20px;
+}
+
+#portfolio-title {
+  margin: 70px 20px 50px 20px;
+  font-size: 30px;
   line-height: 5px;
   text-align: center;
-  vertical-align: middle;
-  line-height: 100px;  
-}
-
-#featured-image {
-  display: block;
-  height: auto; 
-  max-width: 100%; 
-  margin-top: 20px;
 }
 
 #portfolio-content {
@@ -95,30 +116,25 @@ footer {
   justify-content: space-between;
 }
 
-#portfolio-title {
-  margin: 70px 20px 30px 20px;
-  font-size: 30px;
-  line-height: 5px;
-}
-
 .portfolio-item {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
   background: #fff;
   border-radius: 2px;
   flex-basis: 320px;
   flex-grow: 1;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .portfolio-item:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-#portfolio-item-image {
+.portfolio-item-image {
   display: block;
-  height: auto; 
-  max-width: 100%; 
+  height: auto;
+  max-width: 100%;
 }
 
 .portfolio-item-title {
@@ -130,4 +146,26 @@ footer {
 .portfolio-item-desc {
   margin: 10px;
   font-size: 15px;
+}
+
+footer {
+  margin-top: 50px;
+  height: 100px;
+  width: 100%;
+  line-height: 5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .big {
+    font-size: 40px;
+  }
+  .medium {
+    font-size: 25px;
+  }
+  .small {
+    font-size: 15px;
+  }
 }
